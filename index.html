@@ -8,9 +8,20 @@
     <body>
         
         <div id="app">
-            
+            <p>Web3 version: {{version}}</p>
+            <p>Network: {{network}}</p>
+            <p>Current Block: <span v-bind:class="{ flash: classes.flash }">{{currentBlock}}</span></p>
+            <p>Balance of {{walletAddress}}: {{balance}} ETH</p>
+            <br>
+
+            <p>The contract string: "{{myString}}"</p>
         </div>
-            
+
+        <script>
+            // create web3 instance and connect to infura websockets
+            var web3 = new Web3('wss://ropsten.infura.io/_ws');
+        </script>
+        <script src="contract.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
