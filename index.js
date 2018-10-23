@@ -10,7 +10,12 @@ var app = new Vue({
     myString: null,
     classes: {
         flash: false
-    } 
+    }
+  },
+  methods: {
+    doSomething: function(event){
+        console.log('do!');
+    }
   }
 });
 
